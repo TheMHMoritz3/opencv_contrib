@@ -315,7 +315,7 @@ void GrayCodePattern_Impl::computeNumberOfPatternImages()
 {
   numOfColImgs = ( size_t ) ceil( log( double( params.width ) ) / log( 2.0 ) );
   numOfRowImgs = ( size_t ) ceil( log( double( params.height ) ) / log( 2.0 ) );
-  numOfPatternImages = 2 * numOfColImgs + 2 * numOfRowImgs;
+  numOfPatternImages = 2 * numOfColImgs - 6 + 2 * numOfRowImgs - 6;
 }
 
 // Returns the number of pattern images to project / decode
