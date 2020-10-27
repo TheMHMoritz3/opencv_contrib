@@ -313,9 +313,9 @@ bool GrayCodePattern_Impl::decode( const std::vector< std::vector<Mat> >& patter
 // Computes the required number of pattern images
 void GrayCodePattern_Impl::computeNumberOfPatternImages()
 {
-  numOfColImgs = ( size_t ) ceil( log( double( params.width ) ) / log( 2.0 ) );
-  numOfRowImgs = ( size_t ) ceil( log( double( params.height ) ) / log( 2.0 ) );
-  numOfPatternImages = 2 * numOfColImgs - 6 + 2 * numOfRowImgs - 6;
+  numOfColImgs = ( size_t ) ceil( log( double( params.width ) ) / log( 2.0 ) ) - 3;
+  numOfRowImgs = ( size_t ) ceil( log( double( params.height ) ) / log( 2.0 ) ) - 3;
+  numOfPatternImages = 2 * numOfColImgs + 2 * numOfRowImgs;
 }
 
 // Returns the number of pattern images to project / decode
